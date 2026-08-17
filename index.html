@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Editorial Team">
+    <meta name="theme-color" content="#0b0d12">
+    <meta
+        name="description"
+        content="An in-depth examination of FloodCRM, digital flooding attacks,
+        email bombing, SMS bombing, automated phone calls, their human impact,
+        and the challenges of prevention and enforcement."
+    >
+    <meta
+        name="keywords"
+        content="FloodCRM, email bombing, SMS bombing, call bombing,
+        digital harassment, cybersecurity, online abuse, digital security"
+    >
+
+    <meta
+        property="og:title"
+        content="The FloodCRM Pandora's Box: Why One-Click Digital Firebombing
+        Changes Everything"
+    >
+    <meta
+        property="og:description"
+        content="An in-depth analysis of digital flooding attacks, their human
+        cost, and the legal and technical challenges they create."
+    >
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta
+        name="twitter:title"
+        content="The FloodCRM Pandora's Box"
+    >
+    <meta
+        name="twitter:description"
+        content="A detailed analysis of email, SMS, and phone-call flooding
+        attacks and their broader consequences."
+    >
+
+    <title>
+        The FloodCRM Pandora's Box: Why One-Click Digital Firebombing Changes
+        Everything
+    </title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The FloodCRM Pandora's Box: Why One-Click Digital Firebombing Changes Everything — and Not in a Good Way",
+        "description": "An in-depth examination of FloodCRM, digital flooding attacks, their human impact, and the challenges of prevention and enforcement.",
+        "inLanguage": "en",
+        "articleSection": "Cybersecurity",
+        "keywords": [
+            "FloodCRM",
+            "email bombing",
+            "SMS bombing",
+            "call bombing",
+            "digital harassment",
+            "cybersecurity",
+            "online abuse"
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            color-scheme: dark;
+            --background: #080a0f;
+            --surface: #10141d;
+            --surface-light: #171d28;
+            --text: #e8ecf3;
+            --muted: #a7b0c0;
+            --accent: #ff4d5f;
+            --accent-light: #ff8a95;
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: rgba(0, 0, 0, 0.35);
+            --content-width: 780px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    circle at 50% -10%,
+                    rgba(255, 77, 95, 0.16),
+                    transparent 34rem
+                ),
+                var(--background);
+            color: var(--text);
+            font-family:
+                Inter, ui-sans-serif, system-ui, -apple-system,
+                BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        body::before {
+            position: fixed;
+            z-index: -1;
+            inset: 0;
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.014) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.014) 1px,
+                    transparent 1px
+                );
+            background-size: 44px 44px;
+            content: "";
+            pointer-events: none;
+        }
+
+        a {
+            color: var(--accent-light);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: #ffffff;
+        }
+
+        a:focus-visible {
+            border-radius: 3px;
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .site-header {
+            padding: 7rem 1.5rem 5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner,
+        main,
+        .site-footer {
+            width: min(100% - 3rem, var(--content-width));
+            margin-inline: auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin: 0 0 1.4rem;
+            padding: 0.35rem 0.75rem;
+            border: 1px solid rgba(255, 77, 95, 0.35);
+            border-radius: 999px;
+            background: rgba(255, 77, 95, 0.08);
+            color: var(--accent-light);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.13em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2 {
+            text-wrap: balance;
+        }
+
+        h1 {
+            max-width: 920px;
+            margin: 0;
+            color: #ffffff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.6rem, 7vw, 5.4rem);
+            font-weight: 700;
+            letter-spacing: -0.045em;
+            line-height: 1.02;
+        }
+
+        .subtitle {
+            max-width: 700px;
+            margin: 2rem 0 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.65;
+        }
+
+        main {
+            padding: 4.5rem 0 2rem;
+        }
+
+        article {
+            overflow-wrap: break-word;
+        }
+
+        article > p:first-of-type::first-letter {
+            float: left;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--accent);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 0.78;
+        }
+
+        h2 {
+            margin: 4.5rem 0 1.4rem;
+            padding-top: 1rem;
+            color: #ffffff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 4vw, 2.55rem);
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+
+        h2::before {
+            display: block;
+            width: 3.25rem;
+            height: 3px;
+            margin-bottom: 1.15rem;
+            border-radius: 999px;
+            background: var(--accent);
+            content: "";
+        }
+
+        p {
+            margin: 0 0 1.65rem;
+        }
+
+        .sources {
+            margin-top: 5.5rem;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 77, 95, 0.07),
+                    transparent 45%
+                ),
+                var(--surface);
+            box-shadow: 0 24px 80px var(--shadow);
+        }
+
+        .sources h2 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .source-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .source-list a {
+            display: block;
+            height: 100%;
+            padding: 0.8rem 0.95rem;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: var(--surface-light);
+            font-size: 0.88rem;
+            font-weight: 700;
+            line-height: 1.4;
+            text-decoration: none;
+            transition:
+                border-color 160ms ease,
+                color 160ms ease,
+                transform 160ms ease;
+        }
+
+        .source-list a:hover {
+            border-color: rgba(255, 77, 95, 0.55);
+            transform: translateY(-2px);
+        }
+
+        .site-footer {
+            padding: 3rem 0 4rem;
+            color: var(--muted);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 17px;
+            }
+
+            .site-header {
+                padding: 4.5rem 1.25rem 3.5rem;
+            }
+
+            .header-inner,
+            main,
+            .site-footer {
+                width: min(100% - 2rem, var(--content-width));
+            }
+
+            main {
+                padding-top: 3rem;
+            }
+
+            h2 {
+                margin-top: 3.5rem;
+            }
+
+            .sources {
+                padding: 1.25rem;
+            }
+
+            .source-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .source-list a {
+                transition: none;
+            }
+        }
+
+        @media print {
+            :root {
+                color-scheme: light;
+            }
+
+            body {
+                background: #ffffff;
+                color: #111111;
+                font-size: 12pt;
+            }
+
+            body::before {
+                display: none;
+            }
+
+            .site-header {
+                padding: 2rem 0;
+                border-color: #cccccc;
+            }
+
+            h1,
+            h2 {
+                color: #000000;
+            }
+
+            .subtitle,
+            .site-footer {
+                color: #444444;
+            }
+
+            .sources {
+                border-color: #cccccc;
+                background: #ffffff;
+                box-shadow: none;
+            }
+
+            .source-list a {
+                border-color: #dddddd;
+                background: #ffffff;
+                color: #000000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="eyebrow">Cybersecurity Analysis</p>
+            <h1>
+                The FloodCRM Pandora's Box: Why One-Click Digital
+                Firebombing Changes Everything — and Not in a Good Way
+            </h1>
+            <p class="subtitle">
+                An examination of industrialized digital harassment, its human
+                cost, and the legal and technical systems struggling to contain
+                it.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <p>
+                Let me paint you a picture that should make your stomach turn a
+                little.
+            </p>
+
+            <p>
+                It's three in the morning. Your phone starts buzzing. Then
+                buzzing again. And again. Within sixty seconds, you've received
+                forty-seven text messages from companies you've never heard of,
+                all containing verification codes you never requested. Your
+                phone is literally vibrating itself off the nightstand. You
+                silence it, only to have it immediately light up with an
+                incoming call. You answer — silence, then a click. Two seconds
+                later, another call. And another. You check your email hoping
+                for something normal and instead find two thousand seven
+                hundred unread messages that weren't there when you went to
+                bed. Confirmation emails. Newsletter subscriptions. Account
+                verification requests. Password reset notices. Your inbox has
+                essentially been murdered.
+            </p>
+
+            <p>
+                You have not been hacked. Nobody broke into anything. You've
+                just met FloodCRM, and your digital life just became unusable.
+            </p>
+
+            <h2>So What Exactly Are We Dealing With Here?</h2>
+
+            <p>
+                FloodCRM is not malware in the traditional sense. It doesn't
+                infect your computer or steal your passwords. What it does is
+                arguably more insidious because it's almost impossible to
+                defend against using conventional security tools. It's a
+                cloud-based platform that weaponizes the legitimate
+                infrastructure of the internet against an individual target,
+                and it does it with the kind of user-friendly dashboard you'd
+                expect from a legitimate SaaS product. Think of it as Mailchimp
+                for digital terrorism.
+            </p>
+
+            <p>
+                The platform presents its users with a clean control panel. Pick
+                your poison — email, SMS, or phone calls. Enter a target. Click
+                a button. Walk away. The system handles the rest, coordinating
+                thousands upon thousands of automated interactions that
+                originate from entirely real, entirely legitimate services.
+                That's the truly diabolical part. Every single message hitting
+                your inbox or phone is individually valid. Each one comes from
+                a real company with real servers and real SPF records. Your
+                spam filter has no idea what to do because technically, none of
+                this is spam in the traditional sense.
+            </p>
+
+            <h2>The Email Bomber: When Your Inbox Becomes a War Zone</h2>
+
+            <p>
+                The email bombing functionality deserves special attention
+                because of how clever the attack vector actually is. FloodCRM
+                doesn't sit there with a mail server blasting out thousands of
+                messages from a single sketchy IP address. That would be easy
+                to block, easy to trace, and easy to prosecute. Instead, the
+                platform maintains what's essentially a curated database of
+                thousands of websites that have public-facing email submission
+                forms. Newsletter signups. Forum registration pages. Quote
+                request forms. Free trial signups. Account creation wizards.
+                Contact forms. The mundane plumbing of the web that nobody
+                thinks about twice.
+            </p>
+
+            <p>
+                When someone launches an email bomb against a target,
+                FloodCRM's infrastructure programmatically submits that
+                target's email address to every single one of those forms
+                simultaneously. Within minutes, you're not receiving spam.
+                You're receiving perfectly legitimate automated emails from
+                companies like Home Depot, Adobe, Toyota dealerships, random
+                WordPress blogs, and that one SaaS company you did a free trial
+                with three years ago. Each one is a real email sent by a real
+                organization's real mail server. Your email provider sees
+                thousands of distinct senders with proper authentication,
+                distinct content, and no obvious malicious payload.
+            </p>
+
+            <p>
+                The platform claims it can generate up to seventy thousand of
+                these in a single run. Let that number sink in for a second.
+                Seventy thousand. Even if your email provider's spam filtering
+                catches ninety-five percent of them — which it won't, because
+                again, these look legitimate — you're still looking at
+                thirty-five hundred emails in your primary inbox. That's not
+                just an annoyance. If you're running a business, if you're
+                waiting for time-sensitive communications, if you're dealing
+                with legal or medical matters, having your inbox effectively
+                destroyed means you are genuinely harmed. Contracts get
+                missed. Medical results disappear into the noise. Client
+                communications get buried under a mountain of Bed Bath &amp;
+                Beyond promotional emails.
+            </p>
+
+            <p>
+                And here's the thing about trying to clean it up: you can't just
+                unsubscribe from everything because unsubscribing requires
+                finding and clicking links in individual emails, which is
+                exactly what you're trained not to do with suspicious
+                messages. Even if you wanted to, the volume makes it physically
+                impossible. You're forced to essentially abandon that email
+                address, which for most people represents years or decades of
+                accumulated digital identity. Every account you've ever
+                created, every login, every important document — tied to an
+                address that's now functionally dead.
+            </p>
+
+            <h2>The SMS Bomber: Pocket-Sized Psychological Warfare</h2>
+
+            <p>
+                If the email bomber is destructive, the SMS bomber is
+                weaponized anxiety. The attack leverages the same principle —
+                programmatic submission of the target's phone number to
+                services that send verification codes — but the impact is
+                fundamentally different because of how we relate to our phones
+                versus our email.
+            </p>
+
+            <p>
+                Your phone is personal in a way email isn't. It's physically on
+                your body. It buzzes in your pocket during meetings, during
+                dinner with your family, during funerals. When it starts
+                receiving hundreds of messages per minute, each one triggering
+                a notification, a vibration, a sound, you can't just close the
+                tab and walk away. You can silence it, sure, but then you've
+                lost the primary function of your device. Congratulations, the
+                attacker has successfully taken your phone offline without
+                touching it.
+            </p>
+
+            <p>
+                But the real psychological payload of the SMS bomber is what it
+                does to your sense of security. Every ping is an OTP code.
+                Every single one is a signal that somewhere, someone or
+                something is trying to log into some account associated with
+                your number. Your brain, perfectly reasonably, interprets this
+                as an active attack on your accounts. Even if you understand
+                intellectually that it's "just" a flooding attack and nobody is
+                actually trying to break into your Uber account, the lizard
+                part of your brain doesn't know that. Each buzz is a tiny spike
+                of cortisol. Each notification is a threat that needs to be
+                assessed. Multiply that by hundreds of times per hour and
+                you've got a recipe for genuine psychological distress.
+            </p>
+
+            <p>
+                There's also the very real practical danger of legitimate codes
+                getting lost in the noise. If your bank sends a fraud alert
+                with a verification code to confirm a suspicious transaction,
+                and that code is sitting somewhere in a feed of two hundred
+                identical-looking OTP messages from every app on the planet,
+                you might not see it in time. The attacker hasn't broken into
+                your bank account, but they've created the conditions where you
+                can't properly protect it.
+            </p>
+
+            <h2>The Phone Call Bomber: When Your Phone Stops Being a Phone</h2>
+
+            <p>
+                The phone call bomber is where we cross from severe nuisance
+                into something that feels genuinely threatening. The attack
+                uses VoIP infrastructure to place repeated automated calls to
+                the target number in rapid succession. Depending on the
+                configuration, the calls might play silence and disconnect,
+                loop a prerecorded message, or just ring endlessly until the
+                target picks up only to get dead air.
+            </p>
+
+            <p>
+                The immediate effect is that your phone line becomes unusable
+                for legitimate calls. If someone needs to reach you — your
+                kid's school, an elderly parent, your boss, emergency services
+                trying to call you back — they can't. Your line is perpetually
+                busy or you've been forced to put your phone on do not disturb
+                just to get some peace. The attacker has denied you access to a
+                critical communication channel.
+            </p>
+
+            <p>
+                But the long game of phone call bombing is sleep deprivation
+                and psychological erosion. If someone targets you overnight,
+                setting calls to come through at random intervals, you either
+                silence your phone and risk missing genuine emergencies, or
+                you leave it on and don't sleep. Do that for a week and you're
+                looking at measurable cognitive impairment, emotional
+                dysregulation, and impaired decision-making. These are the same
+                tactics used in actual psychological warfare and interrogation
+                scenarios, just delivered through a SaaS dashboard with a
+                Litecoin payment button.
+            </p>
+
+            <h2>Why FloodCRM Specifically Changes the Game</h2>
+
+            <p>
+                People have been writing scripts to annoy other people online
+                since the internet was invented. Email bombs have existed since
+                the nineties. SMS flooding isn't new. So what makes FloodCRM
+                different enough to warrant this kind of deep dive?
+            </p>
+
+            <p>
+                The answer is the industrialization and productization of
+                harassment.
+            </p>
+
+            <p>
+                The old model required at least some technical competence. You
+                had to find a script, figure out how to configure it, maybe set
+                up proxies or deal with API rate limiting. It was janky and
+                unreliable and required enough effort that it filtered out a
+                lot of potential abusers. FloodCRM turns it into a subscription
+                service with a user interface. The technical barrier has been
+                completely removed. If you can fill out an online order form
+                for pizza delivery, you have all the skills required to launch
+                a devastating digital attack against another human being.
+            </p>
+
+            <p>
+                Then there's the infrastructure advantage. Running your own
+                flooding operation at the scale FloodCRM advertises would
+                require maintaining a network of proxies, avoiding rate limits
+                across thousands of services, and constantly updating your
+                target list as websites change their forms or implement
+                CAPTCHAs. That's a full-time engineering job. FloodCRM does all
+                of that maintenance on the backend and packages it into a
+                product with a monthly fee. It's the difference between
+                building your own car from parts and walking onto a lot and
+                driving one off. One requires expertise and dedication. The
+                other requires a credit card.
+            </p>
+
+            <p>
+                The anonymity architecture is the other piece that makes this
+                particularly dangerous from an accountability standpoint. The
+                service operates on both the regular web and via an onion
+                address on the Tor network. Payment is accepted exclusively in
+                cryptocurrency — Bitcoin and Litecoin — which means the
+                payment trail dead-ends at a wallet address. The platform is
+                invite-only, which creates a natural barrier against casual
+                investigators and law enforcement scraping. Every layer is
+                designed to make it as difficult as possible to identify either
+                the operators or the users.
+            </p>
+
+            <p>
+                This combination — low barrier to entry, industrial scale, and
+                built-in anonymity — is what creates a genuinely new threat
+                landscape. It's not just that the tool exists. It's that it's
+                accessible enough that your average forum troll with a
+                grievance and fifty dollars in Bitcoin can now launch an attack
+                that would have required a small team and significant resources
+                just a few years ago.
+            </p>
+
+            <h2>The Collateral Damage Most People Don't Think About</h2>
+
+            <p>
+                When we talk about flooding attacks, the conversation usually
+                centers on the direct target — the person whose phone won't
+                stop buzzing. But the architecture of how FloodCRM works means
+                the damage radiates outward in ways that aren't immediately
+                obvious.
+            </p>
+
+            <p>
+                Every single email bomber attack represents thousands of
+                fraudulent form submissions to legitimate businesses. Those
+                businesses now have a fake entry in their CRM or mailing list.
+                They're paying for email sends to addresses that will never
+                convert. Their email deliverability metrics take a hit because
+                they're suddenly sending to an address that's marking
+                everything as spam out of desperation. At scale, across all of
+                FloodCRM's users running attacks simultaneously, that
+                represents a meaningful drain on the infrastructure of every
+                website that gets scraped for the attack. It's death by a
+                thousand fraudulent signups.
+            </p>
+
+            <p>
+                The SMS attacks directly cost the companies whose verification
+                systems get abused. Sending SMS messages costs money,
+                especially at scale. Every OTP that gets triggered through
+                FloodCRM is a few cents that some company has to pay Twilio or
+                their telecom provider. Multiply that by the volume FloodCRM
+                claims to generate and you're looking at real financial damage
+                being inflicted on third parties who have nothing to do with
+                the attacker or the target.
+            </p>
+
+            <p>
+                The phone call bomber consumes VoIP resources and carrier
+                interconnect capacity that real calls need. It's essentially a
+                distributed denial of service attack against the telecom
+                infrastructure, just localized to a single number. If enough
+                people run enough attacks simultaneously, it starts looking
+                like a systemic problem rather than individual incidents.
+            </p>
+
+            <p>
+                There's also the human cost for support teams. Somewhere, a
+                customer service representative is going to get a very upset
+                phone call from a target who doesn't understand why their
+                number keeps getting spammed by that company's verification
+                system. The rep has no context, no tools to understand what's
+                happening, and no way to help. They're just absorbing abuse
+                that should be directed at the person who clicked the button in
+                FloodCRM's dashboard.
+            </p>
+
+            <h2>The Legal Gray Zone That Makes Enforcement a Nightmare</h2>
+
+            <p>
+                Here's where things get genuinely frustrating from a legal
+                perspective. Flooding attacks occupy a weird space between
+                clearly illegal activity and "disruptive but hard to
+                prosecute."
+            </p>
+
+            <p>
+                The Computer Fraud and Abuse Act in the United States, for
+                example, is built around the concept of unauthorized access to
+                protected computers. FloodCRM doesn't access the target's
+                computer at all. It accesses publicly available web forms and
+                triggers them programmatically. The emails and texts reach the
+                target through entirely legitimate channels. Nobody's password
+                was stolen. Nobody's account was breached. The damage is real,
+                but fitting it into existing statutory frameworks is like
+                trying to nail jelly to a wall.
+            </p>
+
+            <p>
+                There are harassment statutes at the state and federal level,
+                but they generally require a course of conduct that puts the
+                victim in reasonable fear of harm, and proving intent and
+                identity across cryptocurrency payments and Tor connections is
+                a prosecutor's nightmare. Law enforcement resources are finite,
+                and unless the target is a public official, a protected class
+                under hate crime statutes, or there's a clear and immediate
+                threat of physical violence, the reality is that most flooding
+                attacks will never be investigated.
+            </p>
+
+            <p>
+                Civil remedies are theoretically available — you can sue
+                someone for intentional infliction of emotional distress or
+                tortious interference — but you have to find them first. The
+                anonymity layers that make FloodCRM attractive to its users
+                work just as well against civil discovery. Even if you get a
+                judgment, collecting against an anonymous defendant who paid in
+                cryptocurrency is a practical impossibility.
+            </p>
+
+            <p>
+                International dimensions make it even messier. The service
+                operates across jurisdictions. The operators are almost
+                certainly not in the United States. The payment processing
+                happens in cryptocurrency markets that exist largely outside
+                traditional banking regulation. The targets could be anywhere.
+                Which country's laws apply? Whose law enforcement has
+                jurisdiction? Who's going to spend the political capital on
+                extradition proceedings over what looks on paper like a really
+                obnoxious prank?
+            </p>
+
+            <h2>The Human Cost Beyond the Annoyance</h2>
+
+            <p>
+                It's easy to read about FloodCRM and file it under "mean prank"
+                or "online mischief." The reality for people on the receiving
+                end is often much darker.
+            </p>
+
+            <p>
+                People who rely on their phones for medical alerts — diabetes
+                monitors that ping their phone, seizure detection apps,
+                medication reminders — lose access to those tools when their
+                device becomes a nonstop flood of garbage. That's not a prank.
+                That's endangering someone's health.
+            </p>
+
+            <p>
+                Small business owners who depend on their inbox for client
+                communications can lose contracts, miss deadlines, and damage
+                professional relationships when their primary communication
+                channel becomes unusable. A freelance designer who misses three
+                client emails buried under five thousand verification codes
+                doesn't get to explain that to the client who just hired
+                someone else. They just lose the work.
+            </p>
+
+            <p>
+                Victims of domestic violence and stalking often rely on being
+                able to quickly access help through their phone. Having that
+                lifeline drowned in noise by a coordinated flooding attack
+                isn't just harassment — it's isolation. It's cutting someone
+                off from their support network at a moment when they might
+                desperately need it.
+            </p>
+
+            <p>
+                Journalists, activists, and whistleblowers who depend on secure
+                communication channels can be effectively silenced not by
+                hacking into their accounts, but by making those accounts
+                functionally impossible to use. You don't need to read
+                someone's emails if you can make sure they can't read them
+                either.
+            </p>
+
+            <h2>Why This Is Only Going to Get Worse</h2>
+
+            <p>
+                The uncomfortable truth is that the same trends that make
+                FloodCRM effective are accelerating. The number of online
+                services that trigger emails and SMS messages is growing
+                exponentially. Every new app, every new SaaS platform, every
+                new IoT device that sends verification codes or notifications
+                represents another entry in FloodCRM's attack vector database.
+                The richer the ecosystem gets, the more ammunition these
+                platforms have.
+            </p>
+
+            <p>
+                Artificial intelligence is going to make the arms race even
+                more lopsided. Right now, FloodCRM presumably relies on a
+                somewhat static database of forms and services. But you could
+                easily imagine an AI-augmented version that dynamically
+                discovers new submission endpoints, adapts to anti-bot measures
+                in real time, and personalizes attacks to be more effective
+                against specific targets. The attacking tools are going to get
+                smarter faster than the defensive tools can keep up, because
+                the defensive tools are fighting on inherently unfavorable
+                terrain — trying to distinguish between legitimate automated
+                messages and malicious ones when they come from the same
+                sources and look identical.
+            </p>
+
+            <p>
+                The cryptocurrency and anonymity infrastructure that protects
+                services like FloodCRM is also only getting more robust.
+                Mixers, tumblers, privacy coins, decentralized exchanges — the
+                tools for moving money without leaving a trail are maturing
+                faster than the tools for tracing it.
+            </p>
+
+            <h2>What You Can Actually Do About It</h2>
+
+            <p>
+                I'm not going to end this with false reassurance. If you become
+                the target of a well-resourced flooding attack, your options
+                are limited and none of them are great.
+            </p>
+
+            <p>
+                For email attacks, your best move is aggressive filtering set
+                up proactively. Services like Gmail and Outlook have gotten
+                better at detecting pattern-based flooding, but it's reactive
+                by nature. If you're a high-risk target — journalist, activist,
+                public figure, someone with a vengeful ex with technical skills
+                — consider maintaining a private email address that isn't
+                publicly associated with you for critical communications, and
+                treat your public-facing address as potentially disposable.
+            </p>
+
+            <p>
+                For SMS attacks, most carriers have spam reporting mechanisms,
+                but they're designed for individual spam messages, not
+                coordinated flooding from legitimate services. Your practical
+                options boil down to enabling "silence unknown callers"
+                features, using a secondary number for public-facing purposes,
+                and having a plan for what you'll do if your primary number
+                becomes unusable.
+            </p>
+
+            <p>
+                The most important thing you can do is maintain offline backups
+                of critical information. If your email address gets nuked
+                tomorrow, do you know your important account passwords? Can you
+                access your bank without email verification? Do you have phone
+                numbers for important contacts stored somewhere that isn't your
+                phone? Most people don't, and they don't realize how dependent
+                they are on digital availability until it's gone.
+            </p>
+
+            <p>
+                On the broader level, this is a problem that requires legal and
+                infrastructural solutions that don't exist yet. We need clearer
+                statutes that define flooding attacks as the distinct category
+                of harm they represent. We need platforms to build better
+                defenses against automated form abuse. We need payment
+                processors and cryptocurrency exchanges to take a harder line
+                against services that exist primarily to cause harm. None of
+                that helps the person whose phone is buzzing right now, but
+                it's the direction we need to move if we don't want "one-click
+                digital firebombing" to become a standard tool in every troll
+                and harasser's arsenal.
+            </p>
+
+            <p>
+                FloodCRM isn't the first service of its kind and it won't be the
+                last. But it represents a milestone in the commoditization of
+                harassment, and understanding what it is and what it enables is
+                the first step toward taking it seriously as the threat that it
+                is.
+            </p>
+        </article>
+
+        <section class="sources" aria-labelledby="sources-heading">
+            <h2 id="sources-heading">SOURCES</h2>
+
+            <ul class="source-list">
+                <li>
+                    <a href="https://floodcrmfrance.wordpress.com/2026/08/11/floodcrm-bombardement-massif-de-mails-de-sms-et-dappels-telephoniques/">
+                        FloodCRM French
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmrussia.wordpress.com/2026/08/12/floodcrm-%d0%bc%d0%b0%d1%81%d1%81%d0%be%d0%b2%d0%b0%d1%8f-%d1%8d%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b0%d1%8f-%d0%bf%d0%be%d1%87%d1%82%d0%b0-sms-%d0%b8-%d1%82%d0%b5%d0%bb%d0%b5%d1%84/">
+                        FloodCRM Russian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmukraine.wordpress.com/2026/08/12/floodcrm-%d0%bc%d0%b0%d1%81%d0%be%d0%b2%d0%b0-%d0%b5%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b0-%d0%bf%d0%be%d1%88%d1%82%d0%b0-sms-%d1%82%d0%b0-%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd/">
+                        FloodCRM Ukrainian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmspain.wordpress.com/2026/08/12/floodcrm-comunicacion-masiva-por-correo-electronico-sms-y-llamadas-telefonicas/">
+                        FloodCRM Spanish
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmbrazil.wordpress.com/2026/08/11/floodcrm-comunicacao-em-massa-por-e-mail-sms-e-chamadas-telefonicas/">
+                        FloodCRM Brazilian Portuguese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmturkey.wordpress.com/2026/08/12/floodcrm-toplu-e-posta-sms-ve-telefon-iletisimi/">
+                        FloodCRM Turkish
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmvietnam.wordpress.com/2026/08/12/floodcrm-gui-email-sms-va-cuoc-goi-voi-so-luong-lon/">
+                        FloodCRM Vietnamese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmgermany.wordpress.com/2026/08/12/floodcrm-massenversand-von-e-mails-sms-und-telefonanrufen/">
+                        FloodCRM German
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmitaly.wordpress.com/2026/08/12/floodcrm-comunicazione-di-massa-tramite-e-mail-sms-e-chiamate-telefoniche/">
+                        FloodCRM Italian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmchinese.wordpress.com/2026/08/13/floodcrm%ef%bc%9a%e6%b5%b7%e9%87%8f%e7%94%b5%e5%ad%90%e9%82%ae%e4%bb%b6%e3%80%81%e7%9f%ad%e4%bf%a1%e5%92%8c%e7%94%b5%e8%af%9d%e8%bd%b0%e7%82%b8/">
+                        FloodCRM Chinese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmhindi.wordpress.com/2026/08/12/floodcrm-%e0%a4%b9%e0%a4%be%e0%a4%88-%e0%a4%b5%e0%a5%89%e0%a4%b2%e0%a5%8d%e0%a4%af%e0%a5%82%e0%a4%ae-%e0%a4%88%e0%a4%ae%e0%a5%87%e0%a4%b2-sms-%e0%a4%94%e0%a4%b0-%e0%a4%ab%e0%a5%8b%e0%a4%a8-%e0%a4%95/">
+                        FloodCRM Hindi
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmbengali.wordpress.com/2026/08/12/floodcrm-%e0%a6%89%e0%a6%9a%e0%a7%8d%e0%a6%9a-%e0%a6%ae%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%b0-%e0%a6%87%e0%a6%ae%e0%a7%87%e0%a6%b2-%e0%a6%8f%e0%a6%b8%e0%a6%8f%e0%a6%ae%e0%a6%8f/">
+                        FloodCRM Bengali
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmjapanese.wordpress.com/2026/08/12/floodcrm%ef%bc%9a%e5%a4%a7%e9%87%8f%e3%81%ae%e3%83%a1%e3%83%bc%e3%83%ab%e3%80%81sms%e3%80%81%e9%9b%bb%e8%a9%b1%e7%88%86%e6%92%83/">
+                        FloodCRM Japanese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmpunjabi.wordpress.com/2026/08/12/floodcrm-%e0%a8%b5%e0%a9%b1%e0%a8%a1%e0%a9%80-%e0%a8%ae%e0%a8%be%e0%a8%a4%e0%a8%b0%e0%a8%be-%e0%a8%b5%e0%a8%bf%e0%a9%b1%e0%a8%9a-%e0%a8%88%e0%a8%ae%e0%a9%87%e0%a8%b2-sms-%e0%a8%85%e0%a8%a4%e0%a9%87/">
+                        FloodCRM Punjabi
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmegypt.wordpress.com/2026/08/12/floodcrm-%d9%82%d8%b5%d9%81-%d9%85%d9%83%d8%ab%d9%81-%d8%a8%d8%a7%d9%84%d8%a5%d9%8a%d9%85%d9%8a%d9%84%d8%a7%d8%aa-%d9%88%d8%a7%d9%84%d8%b1%d8%b3%d8%a7%d8%a6%d9%84-%d8%a7%d9%84%d9%86%d8%b5%d9%8a%d8%a9/">
+                        FloodCRM Arabic
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmindonesia.wordpress.com/2026/08/12/floodcrm-pemboman-email-sms-dan-panggilan-telepon-bervolume-tinggi/">
+                        FloodCRM Indonesian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmiran.wordpress.com/2026/08/12/floodcrm-%d8%a8%d9%85%d8%a8%d8%a7%d8%b1%d8%a7%d9%86-%d9%be%d8%b1%d8%ad%d8%ac%d9%85-%d8%a7%db%8c%d9%85%db%8c%d9%84%d8%8c-%d9%be%db%8c%d8%a7%d9%85%da%a9-%d9%88-%d8%aa%d9%85%d8%a7%d8%b3-%d8%aa%d9%84/">
+                        FloodCRM Persian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmurdu.wordpress.com/2026/08/12/floodcrm-%d8%a8%da%91%db%92-%d9%be%db%8c%d9%85%d8%a7%d9%86%db%92-%d9%be%d8%b1-%d8%a7%db%8c-%d9%85%db%8c%d9%84%d8%8c-%d8%a7%db%8c%d8%b3-%d8%a7%db%8c%d9%85-%d8%a7%db%8c%d8%b3-%d8%a7%d9%88%d8%b1-%d9%81/">
+                        FloodCRM Urdu
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmtamil.wordpress.com/2026/08/12/floodcrm-%e0%ae%85%e0%ae%a4%e0%ae%bf%e0%ae%95-%e0%ae%85%e0%ae%b3%e0%ae%b5%e0%ae%bf%e0%ae%b2%e0%ae%be%e0%ae%a9-%e0%ae%ae%e0%ae%bf%e0%ae%a9%e0%af%8d%e0%ae%a9%e0%ae%9e%e0%af%8d%e0%ae%9a%e0%ae%b2/">
+                        FloodCRM Tamil
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmalbanian.wordpress.com/2026/08/13/floodcrm-bombardim-me-volum-te-larte-te-email-eve-sms-ve-dhe-thirrjeve-telefonike/">
+                        FloodCRM Albanian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmazerbaijani.wordpress.com/2026/08/13/floodcrm-yuks%c9%99k-h%c9%99cmli-e-poct-sms-v%c9%99-telefon-z%c9%99ngi-bombardimani/">
+                        FloodCRM Azerbaijani
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmbulgarian.wordpress.com/2026/08/13/floodcrm-%d0%b1%d0%be%d0%bc%d0%b1%d0%b0%d1%80%d0%b4%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d1%81-%d0%b3%d0%be%d0%bb%d1%8f%d0%bc-%d0%be%d0%b1%d0%b5%d0%bc-%d0%be%d1%82-%d0%b8%d0%bc%d0%b5%d0%b9%d0%bb%d0%b8-sms/">
+                        FloodCRM Bulgarian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmcatalan.wordpress.com/2026/08/13/floodcrm-bombardeig-massiu-de-correus-electronics-sms-i-trucades-telefoniques/">
+                        FloodCRM Catalan
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmcroatian.wordpress.com/2026/08/13/floodcrm-bombardiranje-velikim-brojem-e-poruka-sms-ova-i-telefonskih-poziva/">
+                        FloodCRM Croatian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmczech.wordpress.com/2026/08/13/floodcrm-hromadne-bombardovani-e-maily-sms-zpravami-a-telefonnimi-hovory/">
+                        FloodCRM Czech
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmdutch.wordpress.com/2026/08/13/floodcrm-massaal-versturen-van-e-mails-sms-berichten-en-telefoontjes/">
+                        FloodCRM Dutch
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmestonian.wordpress.com/2026/08/13/floodcrm-suuremahuline-e-kirjade-sms-ide-ja-telefonikonede-pommitamine/">
+                        FloodCRM Estonian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmfinnish.wordpress.com/2026/08/13/floodcrm-sahkopostien-tekstiviestien-ja-puheluiden-suurivolyyminen-pommittaminen/">
+                        FloodCRM Finnish
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmgreek.wordpress.com/2026/08/13/floodcrm-%ce%bc%ce%b1%ce%b6%ce%b9%ce%ba%cf%8c%cf%82-%ce%b2%ce%bf%ce%bc%ce%b2%ce%b1%cf%81%ce%b4%ce%b9%cf%83%ce%bc%cf%8c%cf%82-%ce%bc%ce%b5-email-sms-%ce%ba%ce%b1%ce%b9-%cf%84%ce%b7%ce%bb%ce%b5%cf%86/">
+                        FloodCRM Greek
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmhungarian.wordpress.com/2026/08/13/floodcrm-nagy-volumenu-e-mail-sms-es-telefonhivas-bombazas/">
+                        FloodCRM Hungarian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmicelandic.wordpress.com/2026/08/13/floodcrm-mikilvaegt-magn-tolvuposta-sms-skilaboda-og-simtala/">
+                        FloodCRM Icelandic
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmlatvian.wordpress.com/2026/08/13/floodcrm-liela-apjoma-e-pasta-sms-un-talruna-zvanu-bombardesana/">
+                        FloodCRM Latvian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmlithuanian.wordpress.com/2026/08/13/floodcrm-dideles-apimties-el-laisku-sms-zinuciu-ir-telefono-skambuciu-bombardavimas/">
+                        FloodCRM Lithuanian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmluxembourgish.wordpress.com/2026/08/13/floodcrm-e-mail-sms-an-uruff-bombardement-a-groussem-emfank/">
+                        FloodCRM Luxembourgish
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmmacedonian.wordpress.com/2026/08/13/floodcrm-%d0%b1%d0%be%d0%bc%d0%b1%d0%b0%d1%80%d0%b4%d0%b8%d1%80%d0%b0%d1%9a%d0%b5-%d1%81%d0%be-%d0%b3%d0%be%d0%bb%d0%b5%d0%bc-%d0%b1%d1%80%d0%be%d1%98-%d0%b5-%d0%bf%d0%be%d1%80%d0%b0%d0%ba%d0%b8-sms/">
+                        FloodCRM Macedonian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmmaltese.wordpress.com/2026/08/13/floodcrm-bumbardament-bvolum-gholi-ta-emails-sms-u-telefonati/">
+                        FloodCRM Maltese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmnorwegian.wordpress.com/2026/08/13/floodcrm-hoyvolumsbombing-med-e-post-sms-og-telefonsamtaler/">
+                        FloodCRM Norwegian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmpolish.wordpress.com/2026/08/13/floodcrm-masowe-bombardowanie-wiadomosciami-e-mail-sms-ami-i-polaczeniami-telefonicznymi/">
+                        FloodCRM Polish
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmportuguese.wordpress.com/2026/08/13/floodcrm-bombardeamento-em-grande-escala-de-e-mails-sms-e-chamadas-telefonicas/">
+                        FloodCRM Portuguese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmromanian.wordpress.com/2026/08/13/floodcrm-bombardament-de-mare-volum-cu-e-mailuri-sms-uri-si-apeluri-telefonice/">
+                        FloodCRM Romanian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmserbian.wordpress.com/2026/08/13/floodcrm-%d0%b1%d0%be%d0%bc%d0%b1%d0%b0%d1%80%d0%b4%d0%be%d0%b2%d0%b0%d1%9a%d0%b5-%d0%b2%d0%b5%d0%bb%d0%b8%d0%ba%d0%b8%d0%bc-%d0%b1%d1%80%d0%be%d1%98%d0%b5%d0%bc-%d0%b8%d0%bc%d0%b5%d1%98%d0%bb%d0%be/">
+                        FloodCRM Serbian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmslovak.wordpress.com/2026/08/13/floodcrm-hromadne-bombardovanie-e-mailami-sms-spravami-a-telefonatmi/">
+                        FloodCRM Slovak
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmhebrew.wordpress.com/2026/08/13/floodcrm-%d7%94%d7%a4%d7%a6%d7%a6%d7%94-%d7%91%d7%a0%d7%a4%d7%97-%d7%92%d7%91%d7%95%d7%94-%d7%a9%d7%9c-%d7%94%d7%95%d7%93%d7%a2%d7%95%d7%aa-%d7%93%d7%95%d7%90%d7%b4%d7%9c-sms-%d7%95%d7%a9%d7%99/">
+                        FloodCRM Hebrew
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmkorean.wordpress.com/2026/08/13/floodcrm-%eb%8c%80%eb%9f%89-%ec%9d%b4%eb%a9%94%ec%9d%bc-sms-%eb%b0%8f-%ec%a0%84%ed%99%94-%ed%8f%ad%ed%83%84-%ea%b3%b5%ea%b2%a9/">
+                        FloodCRM Korean
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmthai.wordpress.com/2026/08/14/floodcrm-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9a%e0%b8%ad%e0%b8%a1%e0%b8%9a%e0%b9%8c%e0%b8%ad%e0%b8%b5%e0%b9%80%e0%b8%a1%e0%b8%a5-sms-%e0%b9%81%e0%b8%a5%e0%b8%b0%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%82/">
+                        FloodCRM Thai
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmmarathi.wordpress.com/2026/08/14/floodcrm-%e0%a4%ae%e0%a5%8b%e0%a4%a0%e0%a5%8d%e0%a4%af%e0%a4%be-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%ae%e0%a4%be%e0%a4%a3%e0%a4%be%e0%a4%b5%e0%a4%b0-%e0%a4%88%e0%a4%ae%e0%a5%87%e0%a4%b2-sms-%e0%a4%86/">
+                        FloodCRM Marathi
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmtelugu.wordpress.com/2026/08/14/floodcrm-%e0%b0%85%e0%b0%a7%e0%b0%bf%e0%b0%95-%e0%b0%aa%e0%b0%b0%e0%b0%bf%e0%b0%ae%e0%b0%be%e0%b0%a3%e0%b0%82%e0%b0%b2%e0%b1%8b-%e0%b0%87%e0%b0%ae%e0%b1%86%e0%b0%af%e0%b0%bf%e0%b0%b2%e0%b1%8d-sms/">
+                        FloodCRM Telugu
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmjavanese.wordpress.com/2026/08/14/floodcrm-bombing-email-sms-lan-panggilan-telpon-kanthi-volume-dhuwur/">
+                        FloodCRM Javanese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmtagalog.wordpress.com/2026/08/14/floodcrm-high-volume-na-email-sms-at-phone-call-bombing/">
+                        FloodCRM Tagalog
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmswahili.wordpress.com/2026/08/14/floodcrm-ujumbe-mwingi-wa-kulipua-barua-pepe-sms-na-simu/">
+                        FloodCRM Swahili
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmgujarati.wordpress.com/2026/08/14/floodcrm-%e0%aa%ae%e0%ab%8b%e0%aa%9f%e0%aa%be-%e0%aa%aa%e0%ab%8d%e0%aa%b0%e0%aa%ae%e0%aa%be%e0%aa%a3%e0%aa%ae%e0%aa%be%e0%aa%82-%e0%aa%88%e0%aa%ae%e0%ab%87%e0%aa%87%e0%aa%b2-sms-%e0%aa%85%e0%aa%a8/">
+                        FloodCRM Gujarati
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmkannada.wordpress.com/2026/08/14/floodcrm-%e0%b2%b9%e0%b3%86%e0%b2%9a%e0%b3%8d%e0%b2%9a%e0%b2%bf%e0%b2%a8-%e0%b2%aa%e0%b3%8d%e0%b2%b0%e0%b2%ae%e0%b2%be%e0%b2%a3%e0%b2%a6-%e0%b2%87%e0%b2%ae%e0%b3%87%e0%b2%b2%e0%b3%8d-sms-%e0%b2%ae/">
+                        FloodCRM Kannada
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmamharic.wordpress.com/2026/08/14/floodcrm-%e1%8a%a8%e1%8d%8d%e1%89%b0%e1%8a%9b-%e1%88%98%e1%8c%a0%e1%8a%95-%e1%8b%ab%e1%88%88%e1%8b%8d-%e1%8b%a8%e1%8a%a2%e1%88%9c%e1%8b%ad%e1%88%8d%e1%8d%a3-sms-%e1%8a%a5%e1%8a%93-%e1%8b%a8%e1%88%b5/">
+                        FloodCRM Amharic
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmhausa.wordpress.com/2026/08/14/floodcrm-harin-aika-imel-sms-da-kiran-waya-da-yawa/">
+                        FloodCRM Hausa
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmmalayalam.wordpress.com/2026/08/13/floodcrm-%e0%b4%89%e0%b4%af%e0%b5%bc%e0%b4%a8%e0%b5%8d%e0%b4%a8-%e0%b4%85%e0%b4%b3%e0%b4%b5%e0%b4%bf%e0%b4%b2%e0%b5%81%e0%b4%b3%e0%b5%8d%e0%b4%b3-%e0%b4%87%e0%b4%ae%e0%b5%86%e0%b4%af%e0%b4%bf/">
+                        FloodCRM Malayalam
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmyoruba.wordpress.com/2026/08/14/floodcrm-bombu-imeeli-sms-ati-awon-ipe-foonu-lopolopo/">
+                        FloodCRM Yoruba
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmburmese.wordpress.com/2026/08/13/floodcrm-%e1%80%a1%e1%80%ae%e1%80%b8%e1%80%99%e1%80%b1%e1%80%b8%e1%80%9c%e1%80%ba%e1%81%8a-sms-%e1%80%94%e1%80%be%e1%80%84%e1%80%b7%e1%80%ba-%e1%80%96%e1%80%af%e1%80%94%e1%80%ba%e1%80%b8%e1%80%81/">
+                        FloodCRM Burmese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmpashto.wordpress.com/2026/08/14/floodcrm-%d8%af-%d8%a8%d8%b1%db%90%da%9a%d9%86%d8%a7%d9%84%db%8c%da%a9%d8%8c-sms-%d8%a7%d9%88-%d9%bc%db%8c%d9%84%db%8c%d9%81%d9%88%d9%86%d9%8a-%d8%b2%d9%86%da%ab%d9%88%d9%86%d9%88-%d9%be%d9%87-%d9%84/">
+                        FloodCRM Pashto
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmodia.wordpress.com/2026/08/14/floodcrm-%e0%ac%ac%e0%ac%b9%e0%ad%81-%e0%ac%aa%e0%ac%b0%e0%ac%bf%e0%ac%ae%e0%ac%be%e0%ac%a3%e0%ac%b0%e0%ad%87-%e0%ac%87%e0%ac%ae%e0%ad%87%e0%ac%b2%e0%ad%8d-sms-%e0%ac%8f%e0%ac%ac%e0%ac%82-%e0%ac%ab/">
+                        FloodCRM Odia
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmsundanese.wordpress.com/2026/08/14/floodcrm-bombing-email-sms-jeung-telepon-dina-volume-luhur/">
+                        FloodCRM Sundanese
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmnepali.wordpress.com/2026/08/14/floodcrm-%e0%a4%89%e0%a4%9a%e0%a5%8d%e0%a4%9a-%e0%a4%ae%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%ae%e0%a4%be-%e0%a4%87%e0%a4%ae%e0%a5%87%e0%a4%b2-sms-%e0%a4%b0-%e0%a4%ab%e0%a5%8b%e0%a4%a8/">
+                        FloodCRM Nepali
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmsinhala.wordpress.com/2026/08/13/floodcrm-%e0%b6%89%e0%b7%84%e0%b7%85-%e0%b6%b4%e0%b7%8a%e0%b6%bb%e0%b6%b8%e0%b7%8f%e0%b6%ab%e0%b6%ba%e0%b7%9a-%e0%b6%8a%e0%b6%b8%e0%b7%9a%e0%b6%bd%e0%b7%8a-sms-%e0%b7%83%e0%b7%84-%e0%b6%af/">
+                        FloodCRM Sinhala
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmoromo.wordpress.com/2026/08/14/floodcrm-imeelii-sms-fi-bilbila-baay%ca%bcinaan-bobeessuu/">
+                        FloodCRM Oromo
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmkazakh.wordpress.com/2026/08/14/floodcrm-%d1%8d%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b4%d1%8b%d2%9b-%d0%bf%d0%be%d1%88%d1%82%d0%b0-sms-%d0%b6%d3%99%d0%bd%d0%b5-%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd-%d2%9b%d0%be%d2%a3/">
+                        FloodCRM Kazakh
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmkhmer.wordpress.com/2026/08/13/floodcrm-%e1%9e%80%e1%9e%b6%e1%9e%9a%e1%9e%94%e1%9f%86%e1%9e%95%e1%9f%92%e1%9e%91%e1%9e%bb%e1%9f%87%e1%9e%a2%e1%9f%8a%e1%9e%b8%e1%9e%98%e1%9f%82%e1%9e%9b-sms-%e1%9e%93%e1%9e%b7%e1%9e%84%e1%9e%80/">
+                        FloodCRM Khmer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmzulu.wordpress.com/2026/08/13/floodcrm-ukuhlasela-ngama-imeyili-ama-sms-nezingcingo-ngobuningi/">
+                        FloodCRM Zulu
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmlao.wordpress.com/2026/08/14/floodcrm-%e0%ba%81%e0%ba%b2%e0%ba%99%e0%ba%9a%e0%ba%ad%e0%ba%a1%e0%bb%80%e0%ba%9a%e0%ba%b5%e0%ba%ad%e0%ba%b5%e0%bb%80%e0%ba%a1%e0%ba%a7-sms-%e0%bb%81%e0%ba%a5%e0%ba%b0%e0%ba%81%e0%ba%b2%e0%ba%99/">
+                        FloodCRM Lao
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmmalay.wordpress.com/2026/08/15/floodcrm-pengeboman-e-mel-sms-dan-panggilan-telefon-bervolume-tinggi/">
+                        FloodCRM Malay
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmuzbek.wordpress.com/2026/08/15/floodcrm-yuqori-hajmli-elektron-pochta-sms-va-telefon-qongiroqlarini-bombardimon-qilish/">
+                        FloodCRM Uzbek
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmarmenian.wordpress.com/2026/08/15/floodcrm%e2%80%a4-%d5%a7%d5%ac%d5%a5%d5%af%d5%bf%d6%80%d5%b8%d5%b6%d5%a1%d5%b5%d5%ab%d5%b6-%d6%83%d5%b8%d5%bd%d5%bf%d5%ab-sms-%d5%b6%d5%a5%d6%80%d5%ab-%d6%87-%d5%b0%d5%a5%d5%bc%d5%a1%d5%ad%d5%b8/">
+                        FloodCRM Armenian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmgeorgian.wordpress.com/2026/08/15/floodcrm-%e1%83%94%e1%83%9a%e1%83%a4%e1%83%9d%e1%83%a1%e1%83%a2%e1%83%98%e1%83%a1-sms-%e1%83%98%e1%83%a1%e1%83%90-%e1%83%93%e1%83%90-%e1%83%a1%e1%83%90%e1%83%a2%e1%83%94%e1%83%9a%e1%83%94%e1%83%a4/">
+                        FloodCRM Georgian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmslovenian.wordpress.com/2026/08/15/floodcrm-obsezno-bombardiranje-e-poste-sms-sporocil-in-telefonskih-klicev/">
+                        FloodCRM Slovenian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmbosnian.wordpress.com/2026/08/15/floodcrm-masovno-bombardovanje-e-poste-sms-poruka-i-telefonskih-poziva/">
+                        FloodCRM Bosnian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmbelarusian.wordpress.com/2026/08/15/floodcrm-%d0%bc%d0%b0%d1%81%d0%b0%d0%b2%d0%b0%d1%8f-%d0%b1%d0%b0%d0%bc%d0%b1%d0%b0%d1%80%d0%b4%d0%b7%d1%96%d1%80%d0%be%d1%9e%d0%ba%d0%b0-%d1%8d%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d0%b0/">
+                        FloodCRM Belarusian
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmturkmen.wordpress.com/2026/08/15/floodcrm-kop-mukdarda-e-pocta-sms-we-telefon-janlaryny-bombalamak/">
+                        FloodCRM Turkmen
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmkyrgyz.wordpress.com/2026/08/15/floodcrm-%d1%8d%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b4%d1%83%d0%ba-%d0%bf%d0%be%d1%87%d1%82%d0%b0%d0%bd%d1%8b-sms-%d0%b1%d0%b8%d0%bb%d0%b4%d0%b8%d1%80%d2%af%d2%af%d0%bb%d3%a9%d1%80%d0%b4/">
+                        FloodCRM Kyrgyz
+                    </a>
+                </li>
+                <li>
+                    <a href="https://floodcrmtajik.wordpress.com/2026/08/15/floodcrm-%d0%b1%d0%be%d0%bc%d0%b1%d0%b0%d0%b1%d0%be%d1%80%d0%be%d0%bd%d0%b8-%d0%be%d0%bc%d0%bc%d0%b0%d0%b2%d0%b8%d0%b8-%d0%bf%d0%be%d1%87%d1%82%d0%b0%d0%b8-%d1%8d%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be/">
+                        FloodCRM Tajik
+                    </a>
+                </li>
+				<li>
+                    <a href="https://floodcrm.org">
+                        FloodCRM English
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            Cybersecurity analysis concerning digital harassment,
+            communications abuse, and online safety.
+        </p>
+    </footer>
+</body>
+</html>
